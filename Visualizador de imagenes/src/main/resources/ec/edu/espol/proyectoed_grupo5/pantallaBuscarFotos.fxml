@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ec.edu.espol.controllers.PantallaBuscarFotosController">
+   <top>
+      <VBox alignment="TOP_CENTER" prefHeight="71.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+         <children>
+            <HBox alignment="TOP_CENTER" prefHeight="62.0" prefWidth="600.0">
+               <children>
+                  <ImageView fitHeight="60.0" fitWidth="72.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../img/flores.png" />
+                     </image>
+                  </ImageView>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Buscar Fotos">
+                     <font>
+                        <Font name="Comic Sans MS" size="44.0" />
+                     </font>
+                  </Text>
+                  <ImageView fitHeight="60.0" fitWidth="72.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../img/flores.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </HBox>
+            <Line endX="456.29290771484375" endY="-2.8967857360839844E-5" startX="-100.0" />
+         </children>
+      </VBox>
+   </top>
+   <center>
+      <GridPane prefHeight="289.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+        <columnConstraints>
+          <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="402.0" minWidth="10.0" prefWidth="402.0" />
+          <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="330.0" minWidth="10.0" prefWidth="198.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints maxHeight="104.0" minHeight="10.0" prefHeight="31.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="201.0" minHeight="8.0" prefHeight="28.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="159.0" minHeight="0.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="159.0" minHeight="10.0" prefHeight="33.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Por personas y lugar" GridPane.rowIndex="2">
+               <font>
+                  <Font name="Courier New Bold" size="23.0" />
+               </font>
+            </Text>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Por personas" GridPane.rowIndex="1">
+               <font>
+                  <Font name="Courier New Bold" size="23.0" />
+               </font>
+            </Text>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Por lugar">
+               <font>
+                  <Font name="Courier New Bold" size="23.0" />
+               </font>
+            </Text>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Por hashtags" GridPane.rowIndex="3">
+               <font>
+                  <Font name="Courier New Bold" size="23.0" />
+               </font>
+            </Text>
+            <Button fx:id="btnBuscarLugar" mnemonicParsing="false" onMouseClicked="#buscarPorLugar" text="&gt;&gt;&lt;&lt;" GridPane.columnIndex="1" />
+            <Button fx:id="btnBuscarPersona" mnemonicParsing="false" onMouseClicked="#buscarPorPersonas" text="&gt;&gt;&lt;&lt;" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <Button fx:id="btnBuscarPeryLu" mnemonicParsing="false" onMouseClicked="#buscarPorPersonasyLugar" text="&gt;&gt;&lt;&lt;" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <Button fx:id="btnBuscarHash" mnemonicParsing="false" onMouseClicked="#buscarPorHashtags" text="&gt;&gt;&lt;&lt;" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+         </children>
+      </GridPane>
+   </center>
+   <bottom>
+      <GridPane prefHeight="35.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+        <columnConstraints>
+          <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Button fx:id="btnRegresar" mnemonicParsing="false" onMouseClicked="#regresarAnterior" text="REGRESAR" />
+         </children>
+      </GridPane>
+   </bottom>
+</BorderPane>
